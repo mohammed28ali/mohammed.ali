@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mohammed Ali Mahmoud — Flutter Developer</title>
+<meta name="theme-color" content="#0b1f38" />
+<title>Mohammed Ali Mahmoud | Flutter Systems Engineer</title>
 <meta name="description" content="Mohammed Ali Mahmoud — Mid-Senior Flutter Developer. Enterprise ERP/SaaS architecture, native Android integration, production mobile systems." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,7 @@
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-controls="primaryNav" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <nav class="primary" id="primaryNav">
+    <nav class="primary" id="primaryNav" aria-label="Primary navigation">
       <a href="#work">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
@@ -53,7 +54,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Mid-Senior Flutter Developer</p>
+        <p class="eyebrow"><span>Mid-Senior Flutter Developer</span><span class="eyebrow-pulse" aria-hidden="true"></span></p>
         <h1>Building enterprise mobile systems that scale.</h1>
         <p class="lede">I design and modernize production Flutter applications — from a single-tenant HR app into a multi-tenant ERP platform running five enterprise clients on one codebase. Clean Architecture, BLoC, native Android integration, CI/CD.</p>
         <div class="hero-actions">
@@ -67,7 +68,14 @@
             LinkedIn
           </a>
         </div>
-        <p class="location">📍 Alexandria, Egypt</p>
+        <div class="hero-meta" aria-label="Professional availability and focus">
+          <span class="availability"><span class="availability-dot" aria-hidden="true"></span>Open to senior Flutter opportunities</span>
+          <span class="hero-stack">Dart / Flutter / Kotlin / Firebase</span>
+        </div>
+        <p class="location">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+          Alexandria, Egypt
+        </p>
       </div>
 
       <div class="hero-visual">
@@ -215,7 +223,7 @@
       <h2 class="section-title reveal">Production applications</h2>
 
       <div class="proj-grid">
-        <article class="proj-card proj-card--featured reveal">
+        <article class="proj-card proj-card--featured reveal" data-project-type="featured">
           <div class="proj-featured-grid">
             <div class="proj-featured-copy">
               <div class="proj-top"><span class="proj-domain">Enterprise · SaaS/ERP</span></div>
