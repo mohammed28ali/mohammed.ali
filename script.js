@@ -11,7 +11,8 @@
   root.classList.add('js');
 
   function setTheme(theme) {
-    root.toggleAttribute('data-theme', theme === 'dark');
+    if (theme === 'dark') root.setAttribute('data-theme', 'dark');
+    else root.removeAttribute('data-theme');
     try {
       localStorage.setItem('theme', theme);
     } catch (error) {}

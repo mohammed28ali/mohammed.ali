@@ -304,6 +304,8 @@ nav.primary a:hover{ color:var(--heading); }
 .btn-primary:hover{ background:var(--blue); transform:translateY(-1px); box-shadow:var(--shadow-md); }
 .btn-ghost{ background:rgba(255,255,255,0.58); color:var(--ink); border-color:var(--line); }
 .btn-ghost:hover{ border-color:var(--blue); color:var(--blue); transform:translateY(-1px); }
+.btn-with-icon{ display:inline-flex; align-items:center; gap:8px; }
+.btn-icon{ width:16px; height:16px; flex:0 0 16px; }
 
 /* ---------------------------------------------
    Hero
