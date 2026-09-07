@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 <script>
   // Runs before paint to avoid a flash of the wrong theme.
   (function () {
@@ -25,7 +26,7 @@
 <header id="siteHeader">
   <div class="wrap headbar">
     <a href="#top" class="brand">Mohammed Ali</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-controls="primaryNav" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="primary" id="primaryNav">
@@ -34,7 +35,7 @@
       <a href="#skills">Skills</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
       <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="4"></circle>
         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
@@ -209,10 +210,10 @@
                 <span class="tenant-name">Moga ERP</span>
                 <span class="tenant-link-actions">
                   <a href="https://play.google.com/store/apps/details?id=com.innov8.moga.erp" target="_blank" rel="noopener" class="store-badge store-badge--sm">
-                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+                    <span>Google Play</span>
                   </a>
                   <a href="https://apps.apple.com/es/app/moga-erp/id6755377526" target="_blank" rel="noopener" class="store-badge store-badge--sm store-badge--apple">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+                    <span>App Store</span>
                   </a>
                 </span>
               </div>
@@ -220,10 +221,10 @@
                 <span class="tenant-name">Tabarak ERP</span>
                 <span class="tenant-link-actions">
                   <a href="https://play.google.com/store/apps/details?id=com.innov8.tabark" target="_blank" rel="noopener" class="store-badge store-badge--sm">
-                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+                    <span>Google Play</span>
                   </a>
                   <a href="https://apps.apple.com/ci/app/tabarak-erp/id6499470425" target="_blank" rel="noopener" class="store-badge store-badge--sm store-badge--apple">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+                    <span>App Store</span>
                   </a>
                 </span>
               </div>
@@ -231,10 +232,10 @@
                 <span class="tenant-name">Castello Development ERP</span>
                 <span class="tenant-link-actions">
                   <a href="https://play.google.com/store/apps/details?id=com.castelloERP.innov8" target="_blank" rel="noopener" class="store-badge store-badge--sm">
-                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+                    <span>Google Play</span>
                   </a>
                   <a href="https://apps.apple.com/ci/app/castello-development-erp/id6756069283" target="_blank" rel="noopener" class="store-badge store-badge--sm store-badge--apple">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+                    <span>App Store</span>
                   </a>
                 </span>
               </div>
@@ -242,10 +243,10 @@
                 <span class="tenant-name">Aljoud HR</span>
                 <span class="tenant-link-actions">
                   <a href="https://play.google.com/store/apps/details?id=com.aljoudhr.app" target="_blank" rel="noopener" class="store-badge store-badge--sm">
-                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+                    <span>Google Play</span>
                   </a>
                   <a href="https://apps.apple.com/eg/app/aljoud-hr/id6739845926" target="_blank" rel="noopener" class="store-badge store-badge--sm store-badge--apple">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+                    <span>App Store</span>
                   </a>
                 </span>
               </div>
@@ -253,10 +254,10 @@
                 <span class="tenant-name">Al-Kayan ERP</span>
                 <span class="tenant-link-actions">
                   <a href="https://play.google.com/store/apps/details?id=com.innov8.alkayan.app" target="_blank" rel="noopener" class="store-badge store-badge--sm">
-                    <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+                    <span>Google Play</span>
                   </a>
                   <a href="https://apps.apple.com/ci/app/al-kayan-erp/id6798183237" target="_blank" rel="noopener" class="store-badge store-badge--sm store-badge--apple">
-                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+                    <span>App Store</span>
                   </a>
                 </span>
               </div>
@@ -279,10 +280,10 @@
           <div class="tag-row"><span class="tag">GetIt</span><span class="tag">Maps</span><span class="tag">Offline-first</span></div>
           <div class="proj-links">
             <a href="https://play.google.com/store/apps/details?id=com.wasiliq" target="_blank" rel="noopener" class="store-badge">
-              <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+              <span>Google Play</span>
             </a>
             <a href="https://apps.apple.com/us/app/wasil-iq/id1634818732" target="_blank" rel="noopener" class="store-badge store-badge--apple">
-              <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+              <span>App Store</span>
             </a>
           </div>
         </article>
@@ -294,10 +295,10 @@
           <div class="tag-row"><span class="tag">NFC</span><span class="tag">Platform Channels</span></div>
           <div class="proj-links">
             <a href="https://play.google.com/store/apps/details?id=com.app.tapyo" target="_blank" rel="noopener" class="store-badge">
-              <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+              <span>Google Play</span>
             </a>
             <a href="https://apps.apple.com/ly/app/tapyo/id1554371750?l=en" target="_blank" rel="noopener" class="store-badge store-badge--apple">
-              <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+              <span>App Store</span>
             </a>
           </div>
         </article>
@@ -309,10 +310,10 @@
           <div class="tag-row"><span class="tag">BLoC</span><span class="tag">Hive</span><span class="tag">Crashlytics</span></div>
           <div class="proj-links">
             <a href="https://play.google.com/store/apps/details?id=com.fitbird.stackdeans" target="_blank" rel="noopener" class="store-badge">
-              <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+              <span>Google Play</span>
             </a>
             <a href="https://apps.apple.com/tr/app/fitbird-uae/id6447301757" target="_blank" rel="noopener" class="store-badge store-badge--apple">
-              <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+              <span>App Store</span>
             </a>
           </div>
         </article>
@@ -324,10 +325,10 @@
           <div class="tag-row"><span class="tag">BLoC</span><span class="tag">RTL Arabic UI</span><span class="tag">Speech</span></div>
           <div class="proj-links">
             <a href="https://play.google.com/store/apps/details?id=com.maharattufl.maharatufl" target="_blank" rel="noopener" class="store-badge">
-              <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" width="105" height="40" loading="lazy">
+              <span>Google Play</span>
             </a>
             <a href="https://apps.apple.com/us/app/%D9%85%D9%87%D8%A7%D8%B1%D8%A9-%D8%B7%D9%81%D9%84/id6467820570" target="_blank" rel="noopener" class="store-badge store-badge--apple">
-              <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="105" height="40" loading="lazy">
+              <span>App Store</span>
             </a>
           </div>
         </article>
@@ -410,112 +411,6 @@
     <a href="#top">Back to top ↑</a>
   </div>
 </footer>
-
-<script>
-  document.documentElement.classList.add('js');
-
-  // Theme toggle
-  const themeToggle = document.getElementById('themeToggle');
-  const root = document.documentElement;
-  function setTheme(theme) {
-    if (theme === 'dark') root.setAttribute('data-theme', 'dark');
-    else root.removeAttribute('data-theme');
-    try { localStorage.setItem('theme', theme); } catch (e) {}
-  }
-  themeToggle.addEventListener('click', () => {
-    const isDark = root.getAttribute('data-theme') === 'dark';
-    setTheme(isDark ? 'light' : 'dark');
-  });
-
-  const toggle = document.getElementById('navToggle');
-  const nav = document.getElementById('primaryNav');
-  const header = document.getElementById('siteHeader');
-
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', String(isOpen));
-  });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    nav.classList.remove('open');
-    toggle.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }));
-
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 8);
-  }, { passive: true });
-
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Scroll-triggered reveals for section titles, experience cards, project cards, skill groups
-  const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduceMotion) {
-    const revealIo = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          revealIo.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    revealEls.forEach((el) => revealIo.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add('in-view'));
-  }
-
-  // Active nav link tracking
-  const navLinks = nav.querySelectorAll('a[href^="#"]');
-  const trackedSections = document.querySelectorAll('main [id], footer[id]');
-  if ('IntersectionObserver' in window && trackedSections.length) {
-    const navIo = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const link = nav.querySelector(`a[href="#${entry.target.id}"]`);
-        if (!link) return;
-        navLinks.forEach((l) => l.classList.remove('active'));
-        link.classList.add('active');
-      });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-    trackedSections.forEach((s) => navIo.observe(s));
-  }
-
-  // Animated count-up for hero stats
-  const statNums = document.querySelectorAll('.stat-num');
-  function animateCount(el) {
-    const raw = el.textContent.trim();
-    const match = raw.match(/^([\d,.]+)(.*)$/);
-    if (!match) return;
-    const target = parseFloat(match[1].replace(/,/g, ''));
-    const suffix = match[2];
-    const duration = 900;
-    const start = performance.now();
-    function step(now) {
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      const val = Math.round(target * eased);
-      el.textContent = val + suffix;
-      if (p < 1) requestAnimationFrame(step);
-      else el.textContent = match[1] + suffix;
-    }
-    requestAnimationFrame(step);
-  }
-  if ('IntersectionObserver' in window && statNums.length) {
-    if (reduceMotion) {
-      // leave static values as-is
-    } else {
-      const statsIo = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            statsIo.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.6 });
-      statNums.forEach((el) => statsIo.observe(el));
-    }
-  }
-</script>
 
 </body>
 </html>
