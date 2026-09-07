@@ -470,16 +470,12 @@ nav.primary a:hover{ color:var(--heading); }
 .proj-links .muted{ color:var(--ink-soft); font-style:italic; font-weight:400; font-size:12.5px; }
 
 .store-badge{
-  display:inline-flex; align-items:center; min-height:38px; padding:0 13px;
-  border:1px solid var(--line); border-radius:7px; background:var(--paper);
-  color:var(--heading); font:600 11.5px var(--font-mono); text-decoration:none;
-  transition:color .15s ease, background-color .15s ease, border-color .15s ease, transform .15s ease;
+  display:inline-flex; line-height:0; border-radius:7px; overflow:hidden;
+  transition:opacity .15s ease, transform .15s ease, box-shadow .15s ease;
 }
-.store-badge::before{ content:"↗"; margin-right:7px; color:var(--blue); font:600 14px var(--font-body); }
-.store-badge:hover{ border-color:var(--blue); background:var(--blue-tint); color:var(--blue-dark); transform:translateY(-2px); }
-.store-badge--apple::before{ content:"⌘"; color:var(--signal); }
-.store-badge--apple:hover{ border-color:var(--signal); background:var(--signal-tint); color:var(--signal); }
-.store-badge--sm{ min-height:32px; padding:0 10px; font-size:10.5px; }
+.store-badge:hover{ opacity:.88; transform:translateY(-2px); box-shadow:var(--shadow-sm); }
+.store-badge img{ display:block; width:105px; height:40px; object-fit:contain; }
+.store-badge--sm img{ width:84px; height:32px; }
 
 /* Featured project card — Innov8 ERP, spans full width to list all tenant flavors */
 .proj-card--featured{ grid-column:1 / -1; padding:32px; }
@@ -508,7 +504,7 @@ nav.primary a:hover{ color:var(--heading); }
 @media (max-width:480px){
   .tenant-link-row{ flex-direction:column; align-items:flex-start; gap:6px; }
   .tenant-links{ padding:14px 16px; }
-  .store-badge--sm{ min-height:30px; }
+  .store-badge--sm img{ width:73px; height:28px; }
 }
 @media (max-width:600px){
   .proj-card--featured{ padding:22px; }
