@@ -447,9 +447,9 @@ nav.primary a:hover{ color:var(--heading); }
 
 .store-badge{ display:inline-flex; line-height:0; transition:opacity .15s ease, transform .15s ease; }
 .store-badge:hover{ opacity:0.85; transform:translateY(-1px); }
-.store-badge img{ display:block; width:135px; height:40px; object-fit:contain; }
+.store-badge img{ display:block; width:105px; height:40px; object-fit:fill; }
 .store-badge--apple img{ border-radius:6px; }
-.store-badge--sm img{ width:108px; height:32px; }
+.store-badge--sm img{ width:84px; height:32px; }
 
 /* Featured project card — Innov8 ERP, spans full width to list all tenant flavors */
 .proj-card--featured{ grid-column:1 / -1; padding:32px; }
@@ -478,7 +478,7 @@ nav.primary a:hover{ color:var(--heading); }
 @media (max-width:480px){
   .tenant-link-row{ flex-direction:column; align-items:flex-start; gap:6px; }
   .tenant-links{ padding:14px 16px; }
-  .store-badge--sm img{ width:96px; height:28px; }
+  .store-badge--sm img{ width:73px; height:28px; }
 }
 @media (max-width:600px){
   .proj-card--featured{ padding:22px; }
