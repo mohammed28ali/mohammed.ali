@@ -473,6 +473,8 @@ nav.primary a:hover{ color:var(--heading); }
   display:inline-flex; line-height:0; border-radius:7px; overflow:hidden;
   transition:opacity .15s ease, transform .15s ease, box-shadow .15s ease;
 }
+.store-badge::before,
+.store-badge::after{ content:none; display:none; }
 .store-badge:hover{ opacity:.88; transform:translateY(-2px); box-shadow:var(--shadow-sm); }
 .store-badge img{ display:block; width:105px; height:40px; object-fit:contain; }
 .store-badge--sm img{ width:84px; height:32px; }
