@@ -74,57 +74,70 @@
         <div class="diagram-card">
           <div class="diagram-card-head">
             <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
-            <span class="diagram-title">Innov8 ERP — System Overview</span>
+            <span class="diagram-title">Innov8 ERP — Platform Architecture</span>
           </div>
-          <svg viewBox="0 0 440 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of one Flutter ERP codebase serving five enterprise tenants across five business modules">
-            <g class="module-group" font-family="Inter" font-size="10" font-weight="600" fill="#475467">
-              <text x="16" y="24">HR</text>
-              <text x="80" y="24">CRM</text>
-              <text x="150" y="24">Inventory</text>
-              <text x="240" y="24">Engineering</text>
-              <text x="335" y="24">Procurement</text>
-              <g stroke="#D0D5DD" stroke-width="1" fill="#F9FAFB">
-                <rect x="12" y="32" width="46" height="22" rx="5"/>
-                <rect x="76" y="32" width="52" height="22" rx="5"/>
-                <rect x="146" y="32" width="72" height="22" rx="5"/>
-                <rect x="236" y="32" width="82" height="22" rx="5"/>
-                <rect x="330" y="32" width="90" height="22" rx="5"/>
-              </g>
+          <svg viewBox="0 0 440 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flowchart showing Innov8 ERP modules moving through a shared core to data services and five tenant deployments">
+            <defs>
+              <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                <path d="M0 0L6 3L0 6Z" fill="#2F6FED"/>
+              </marker>
+            </defs>
+            <g class="flow-start" font-family="IBM Plex Mono" font-size="9" font-weight="500">
+              <rect x="145" y="12" width="150" height="28" rx="14"/>
+              <text x="220" y="30" text-anchor="middle">CLIENT REQUEST</text>
             </g>
-            <g stroke="#D0D5DD" stroke-width="1.2">
-              <line id="l1" x1="35" y1="54" x2="170" y2="100"/>
-              <line id="l2" x1="102" y1="54" x2="180" y2="100"/>
-              <line id="l3" x1="182" y1="54" x2="200" y2="100"/>
-              <line id="l4" x1="277" y1="54" x2="230" y2="100"/>
-              <line id="l5" x1="375" y1="54" x2="260" y2="100"/>
+            <g class="flow-arrows" stroke="#2F6FED" stroke-width="1.4" marker-end="url(#arrow)">
+              <line id="l1" x1="220" y1="40" x2="220" y2="56"/>
+            </g>
+            <g class="module-group" font-family="Inter" font-size="9.5" font-weight="600">
+              <text x="16" y="54" class="flow-heading">FEATURE MODULES</text>
+              <rect x="14" y="64" width="76" height="28" rx="6"/>
+              <rect x="100" y="64" width="76" height="28" rx="6"/>
+              <rect x="186" y="64" width="76" height="28" rx="6"/>
+              <rect x="272" y="64" width="76" height="28" rx="6"/>
+              <rect x="358" y="64" width="68" height="28" rx="6"/>
+              <text x="52" y="82" text-anchor="middle">HR</text>
+              <text x="138" y="82" text-anchor="middle">CRM</text>
+              <text x="224" y="82" text-anchor="middle">INVENTORY</text>
+              <text x="310" y="82" text-anchor="middle">ENGINEERING</text>
+              <text x="392" y="82" text-anchor="middle">SALES</text>
+            </g>
+            <g class="flow-arrows" stroke="#D0D5DD" stroke-width="1.2" marker-end="url(#arrow)">
+              <line id="l2" x1="52" y1="92" x2="52" y2="106"/>
+              <line id="l3" x1="138" y1="92" x2="138" y2="106"/>
+              <line id="l4" x1="224" y1="92" x2="224" y2="106"/>
+              <line id="l5" x1="310" y1="92" x2="310" y2="106"/>
             </g>
             <g class="core-group">
-              <rect x="130" y="100" width="160" height="50" rx="10" fill="#152048"/>
-              <text x="210" y="122" text-anchor="middle" font-family="Sora" font-weight="700" font-size="13" fill="#FFFFFF">ERP Core</text>
-              <text x="210" y="138" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="#93A2E8">Clean Architecture · BLoC</text>
+              <rect x="14" y="106" width="412" height="46" rx="9"/>
+              <text x="30" y="125" font-family="Sora" font-weight="700" font-size="12">SHARED ERP CORE</text>
+              <text x="30" y="140" font-family="IBM Plex Mono" font-size="8.5">CLEAN ARCHITECTURE  /  BLoC  /  MULTI-TENANT</text>
+              <text x="408" y="130" text-anchor="end" font-family="IBM Plex Mono" font-size="9" fill="#7EE2B8">ONLINE</text>
             </g>
-            <g stroke="#2F6FED" stroke-width="1.4">
-              <line id="t1" x1="150" y1="150" x2="55" y2="210"/>
-              <line id="t2" x1="180" y1="150" x2="140" y2="210"/>
-              <line id="t3" x1="210" y1="150" x2="225" y2="210"/>
-              <line id="t4" x1="240" y1="150" x2="310" y2="210"/>
-              <line id="t5" x1="270" y1="150" x2="395" y2="210"/>
+            <g class="flow-arrows" stroke="#2F6FED" stroke-width="1.4" marker-end="url(#arrow)">
+              <line id="t1" x1="220" y1="152" x2="220" y2="168"/>
             </g>
-            <g class="tenant-group" font-family="Inter" font-size="10.5" font-weight="600" fill="#152048">
-              <rect x="14" y="210" width="82" height="30" rx="8" fill="#EEF3FF" stroke="#2F6FED" stroke-width="1"/>
-              <text x="55" y="229" text-anchor="middle">Moga</text>
-              <rect x="100" y="210" width="82" height="30" rx="8" fill="#EEF3FF" stroke="#2F6FED" stroke-width="1"/>
-              <text x="141" y="229" text-anchor="middle">Tabarak</text>
-              <rect x="184" y="210" width="82" height="30" rx="8" fill="#EEF3FF" stroke="#2F6FED" stroke-width="1"/>
-              <text x="225" y="229" text-anchor="middle">Castello</text>
-              <rect x="268" y="210" width="82" height="30" rx="8" fill="#EEF3FF" stroke="#2F6FED" stroke-width="1"/>
-              <text x="309" y="229" text-anchor="middle">Aljoud</text>
-              <rect x="352" y="210" width="82" height="30" rx="8" fill="#EEF3FF" stroke="#2F6FED" stroke-width="1"/>
-              <text x="393" y="229" text-anchor="middle">Al-Kayan</text>
+            <g class="tenant-group" font-family="Inter" font-size="9.5" font-weight="600">
+              <text x="16" y="166" class="tenant-heading">DATA &amp; DELIVERY SERVICES</text>
+              <rect x="14" y="176" width="124" height="28" rx="6"/>
+              <rect x="158" y="176" width="124" height="28" rx="6"/>
+              <rect x="302" y="176" width="124" height="28" rx="6"/>
+              <text x="76" y="194" text-anchor="middle">REST / FIREBASE</text>
+              <text x="220" y="194" text-anchor="middle">SQLITE / HIVE</text>
+              <text x="364" y="194" text-anchor="middle">CI/CD / FLAVORS</text>
+            </g>
+            <g class="flow-arrows" stroke="#2F6FED" stroke-width="1.4" marker-end="url(#arrow)">
+              <line id="t2" x1="76" y1="204" x2="76" y2="220"/>
+              <line id="t3" x1="220" y1="204" x2="220" y2="220"/>
+              <line id="t4" x1="364" y1="204" x2="364" y2="220"/>
+            </g>
+            <g class="flow-output" font-family="IBM Plex Mono" font-size="9" font-weight="500">
+              <rect x="14" y="220" width="412" height="28" rx="14"/>
+              <text x="220" y="238" text-anchor="middle">FLUTTER FLAVORS  →  5 ENTERPRISE TENANTS</text>
             </g>
             <g class="caption-group">
-              <text x="14" y="270" font-family="Inter" font-size="11" fill="#667085">One codebase → five enterprise tenants → ten-plus modules.</text>
-              <text x="14" y="287" font-family="Inter" font-size="11" fill="#667085">Flutter Flavors isolate configuration and deploy targets per client.</text>
+              <text x="14" y="268" font-family="IBM Plex Mono" font-size="10">10+ MODULES  /  1 CODEBASE  /  5 DEPLOYMENTS</text>
+              <text x="14" y="286" font-family="Inter" font-size="11">One architecture. Consistent delivery at enterprise scale.</text>
             </g>
           </svg>
         </div>
@@ -159,7 +172,7 @@
               <span class="job-date">Dec 2024 — Present</span>
             </div>
             <ul>
-              <li>Led architecture and development of a multi-tenant Flutter ERP/SaaS platform — evolved from a single HR app into a system spanning HR, CRM, Inventory, Engineering, and Procurement, now serving 5 enterprise tenants from one white-label codebase.</li>
+              <li>Led architecture and development of a multi-tenant Flutter ERP/SaaS platform — evolved from a single HR app into a system spanning HR, CRM, Inventory, Engineering, and Sales, now serving 5 enterprise tenants from one white-label codebase.</li>
               <li>Migrated the production codebase from GetX/MVC to Clean Architecture with BLoC, cutting measured load times by ~70% and improving testability.</li>
               <li>Built native Android modules in Kotlin, exposed to Flutter via MethodChannel, for POS terminal payment processing and receipt printing.</li>
               <li>Set up GitHub Actions and Xcode Cloud CI/CD with multi-flavor builds and signing automation, cutting release cycle time by ~70%.</li>
@@ -207,7 +220,7 @@
             <div class="proj-featured-copy">
               <div class="proj-top"><span class="proj-domain">Enterprise · SaaS/ERP</span></div>
               <h3>Innov8 ERP</h3>
-              <p>Clean Architecture + BLoC ERP ecosystem — HR, CRM, Inventory, Procurement, Engineering — running 5 enterprise tenants on one white-label codebase.</p>
+              <p>Clean Architecture + BLoC ERP ecosystem — HR, CRM, Inventory, Sales, Engineering — running 5 enterprise tenants on one white-label codebase.</p>
               <div class="tag-row"><span class="tag">Clean Architecture</span><span class="tag">BLoC</span><span class="tag">Flavors</span></div>
             </div>
             <div class="tenant-links">
@@ -482,7 +495,9 @@
   </div>
   <div class="wrap footer-bottom">
     <span>© 2026 Mohammed Ali Mahmoud</span>
-    <a href="#top">Back to top ↑</a>
+    <a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </a>
   </div>
 </footer>
 

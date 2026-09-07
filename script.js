@@ -6,6 +6,7 @@
   const nav = document.getElementById('primaryNav');
   const navToggle = document.getElementById('navToggle');
   const themeToggle = document.getElementById('themeToggle');
+  const backToTop = document.querySelector('.back-to-top');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   root.classList.add('js');
@@ -41,9 +42,13 @@
 
     nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNavigation));
 
-    const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 8);
-    updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive: true });
+    const updateScrollUi = () => {
+      const hasScrolled = window.scrollY > 8;
+      header?.classList.toggle('scrolled', hasScrolled);
+      backToTop?.classList.toggle('is-visible', window.scrollY > 240);
+    };
+    updateScrollUi();
+    window.addEventListener('scroll', updateScrollUi, { passive: true });
   }
 
   function setupReveals() {

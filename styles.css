@@ -358,6 +358,12 @@ nav.primary a:hover{ color:var(--heading); }
 /* SVG diagram — theme-aware colors (override inline presentation attributes) */
 .module-group text{ fill:var(--diagram-module-text); }
 .module-group rect{ fill:var(--diagram-module-fill); stroke:var(--diagram-module-stroke); }
+.flow-start rect,
+.flow-output rect{ fill:var(--diagram-tenant-fill); stroke:var(--diagram-tenant-stroke); }
+.flow-start text,
+.flow-output text{ fill:var(--diagram-tenant-text); }
+.flow-heading{ fill:var(--diagram-caption); font-family:var(--font-mono); font-size:9px; letter-spacing:.08em; }
+.flow-output{ letter-spacing:.04em; }
 #l1,#l2,#l3,#l4,#l5{ stroke:var(--diagram-line); }
 .core-group rect{ fill:var(--diagram-core-fill); }
 .core-group text:nth-of-type(1){ fill:var(--diagram-core-text); }
@@ -365,6 +371,7 @@ nav.primary a:hover{ color:var(--heading); }
 #t1,#t2,#t3,#t4,#t5{ stroke:var(--diagram-accent-line); }
 .tenant-group rect{ fill:var(--diagram-tenant-fill); stroke:var(--diagram-tenant-stroke); }
 .tenant-group text{ fill:var(--diagram-tenant-text); }
+.tenant-group .tenant-heading{ fill:var(--diagram-caption); font-size:9px; letter-spacing:.08em; }
 .caption-group text{ fill:var(--diagram-caption); }
 
 /* ---------------------------------------------
@@ -552,5 +559,21 @@ footer::before{ content:"/ flutter / architecture / delivery"; position:absolute
   display:flex; justify-content:space-between; padding:22px var(--content-gutter);
   border-top:1px solid var(--footer-line); font-size:13px; color:var(--footer-text-soft);
 }
-.footer-bottom a{ text-decoration:none; color:var(--footer-text-soft); }
-.footer-bottom a:hover{ color:#fff; }
+.footer-bottom a{
+  position:fixed; right:24px; bottom:24px; z-index:40;
+  display:inline-flex; align-items:center; justify-content:center;
+  width:46px; height:46px; border:1px solid var(--line); border-radius:12px;
+  background:var(--surface-strong); color:var(--on-surface-strong);
+  box-shadow:var(--shadow-md); text-decoration:none;
+  transition:background-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.footer-bottom a svg{ width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.footer-bottom a:hover{ background:var(--blue); color:#fff; transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+.back-to-top{ opacity:0; visibility:hidden; pointer-events:none; transform:translateY(10px); }
+.back-to-top.is-visible{ opacity:1; visibility:visible; pointer-events:auto; transform:translateY(0); animation:backToTopIn .35s cubic-bezier(.22,.61,.36,1) both, backToTopFloat 2.8s ease-in-out .35s infinite; }
+.back-to-top.is-visible:hover{ transform:translateY(-3px); }
+@keyframes backToTopIn{ from{ opacity:0; transform:translateY(14px) scale(.8); } to{ opacity:1; transform:translateY(0) scale(1); } }
+@keyframes backToTopFloat{ 0%,100%{ box-shadow:var(--shadow-md); } 50%{ box-shadow:0 12px 28px rgba(23,105,224,.28); } }
+@media (max-width:600px){
+  .footer-bottom a{ right:16px; bottom:16px; width:42px; height:42px; }
+}
